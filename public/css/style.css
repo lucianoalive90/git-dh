@@ -1,0 +1,98 @@
+/*
+Paleta de colores
+Amarillo: #EAC926;
+Azul: #03264C;
+Celeste: #1259c3;
+Gris oscuro: #666;
+Gris claro: #ebebeb;
+Verde: #39b54a;
+
+Tipografías
+Familia: 'Roboto'
+Nos envían esta demo de cómo cargar fuentes de Google Fonts. Además
+podemos consultar el siguiente recurso aquí, para más detalle.
+● Tamaños Tipográficos
+Cuerpos de texto: 12px
+Titulares (Basado en tu última visita/Ofertas): 24px
+Precios: 18px
+Descuentos: 16px
+Descripciones: 16px
+● Íconos
+El departamento de diseño usó los íconos de este sitio:
+https://fontawesome.com/icons?d=gallery&m=free
+*/
+
+.negrita-rojo{
+    font-weight: bold;
+    color: rebeccapurple;
+}
+
+.fondo-banner{
+  background-color: #EAC926;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  background-color: #666;
+}
+
+.tipo-cuerpo{
+  font-size: 10px;
+}
+
+.tipo-titulares{
+  font-size: 24px;
+}
+
+.tipo-precio{
+  font-size: 18px;
+}
+
+.tipo-desc{
+  font-size: 16px;
+}
+
+.burguer-menu{
+  background-color:#1259c3;
+  padding: 10;
+  outline-color: #1259c3;
+  outline-width:  thick;
+  outline-style: solid;
+  color: #ffffff;
+  border-radius: 1%;
+  position: relative;
+  display: table;
+  vertical-align: middle;
+  margin: auto;
+}
+
+.fondo-claro{
+  background-color: #ebebeb;
+}
+
+.footer-align{
+  background-color: #ebebeb;
+  text-align: center;
+
+}
+
+.texto-negrita{
+  font-weight: bold;
+  margin: 0 auto;
+  
+}
+
+.pie-negrita{
+  font-weight: bold;
+  text-align: start;
+  
+}
+
+.parrafo{
+  margin: 0 auto;
+
+}
+.agrandar-icon{
+  font-size: 40px;
+}
