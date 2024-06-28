@@ -28,7 +28,27 @@ https://fontawesome.com/icons?d=gallery&m=free
   box-sizing: border-box;
 }
 
-.flex-container{
+.efecto-transition {
+  transition: 200ms;
+}
+
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  background-color: #ebebeb;
+}
+
+.contenedor-header {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #EAC926;
+  align-items: center;
+
+}
+
+
+.flex-container {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -37,16 +57,33 @@ https://fontawesome.com/icons?d=gallery&m=free
   /*margin: 0 auto;*/
 }
 
-.flex-titulos{
-    display: flex;
-    justify-content: flex-start; /* Alinea los elementos hijos a la izquierda */
-    align-items: center; /* Centra verticalmente los elementos si es necesario */
-    /*height: 100vh; /* Ajusta la altura del contenedor según tus necesidades */
-    padding: 20px; /* Espaciado interno del contenedor */
-    background-color: #f0f0f0; /* Color de fondo del contenedor */
+.flex-titulos {
+  display: flex;
+  justify-content: flex-start;
+  /* Alinea los elementos hijos a la izquierda */
+  align-items: center;
+  /* Centra verticalmente los elementos si es necesario */
+  /*height: 100vh; /* Ajusta la altura del contenedor según tus necesidades */
+  padding: 20px;
+  /* Espaciado interno del contenedor */
+  background-color: #f0f0f0;
+  /* Color de fondo del contenedor */
 }
 
-h3{
+.form-search,
+.logo-header {
+  width: 50%;
+
+}
+
+.div-header-control {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  position: relative;
+}
+
+h3 {
   margin: 0;
 }
 
@@ -54,59 +91,62 @@ h3{
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  background-color: aqua;
+  background-color: #f9f9f9;
 }
 
 .product {
-    background-color: #f9f9f9;
-    border: 1px solid #000000;
-    border-radius: 5px;
-    padding: 10px;
-    width: calc(100% - 40px); /* Default full width for mobile */
-    max-width: 300px;
-    text-align: center;
+  /*background-color: #f9f9f9;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  padding: 10px;
+  width: calc(100% - 40px);  Default full width for mobile 
+  max-width: 300px;
+  text-align: center;*/
+  margin: 10px;
+}
+
+.product:hover {
+  box-shadow: 0px 0px 10px rgb(100, 100, 100);
+
+  .product-truck-logo {
+    transform: rotate(-90deg);
+  }
+
+  .tipo-descripcion {
+    visibility: visible;
+  }
 }
 
 .product img {
-    max-width: 100%;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
+  max-width: 100%;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 
-.product-desc-box>.product-delivery-icon {
-  display: block;
+.product-truck-logo {
+  color: #39b54a;
   font-size: 16px;
-  padding: 5px;
   width: 30px;
   height: 30px;
   border: 1px solid #39b54a;
-  background-color: #FFF;
   border-radius: 50%;
+  padding: 5px;
+  background-color: white;
+  /*no se vea lo de atras*/
   position: absolute;
   right: 20px;
   top: -15px;
 }
 
-.product-desc-box {
-  position: relative;
-}
-
-.negrita-rojo {
-  font-weight: bold;
-  color: rebeccapurple;
-}
-
 .fondo-banner {
   background-color: #EAC926;
-  
+
 
 }
 
-.roboto-regular {
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  background-color: #ebebeb;
+.input-search {
+  width: 90%;
 }
 
 .tipo-cuerpo {
@@ -115,41 +155,47 @@ h3{
 
 .tipo-titulares {
   font-size: 24px;
-  display: inline;
-  justify-content: flex-start;
+  width: 100%;
+  margin-bottom: 15px;
 }
 
 .tipo-precio {
   font-size: 18px;
-  
-
+  width: 30%;
 }
 
 .tipo-descuento {
- 
+  width: 70%;
   font-size: 16px;
-  color: green;
+  color: #39b54a;
+  padding: auto;
+  margin-right: 10px;
+  text-align: start;
 }
 
 .tipo-descripcion {
-  margin-top: 0;
-  ;
   font-size: 16px;
+  font-weight: bold;
+  visibility: hidden;
 }
 
+.cuotas {
+  text-align: center;
+  margin: 20px;
+}
+
+
 .burguer-menu {
+  display: block;
   background-color: #1259c3;
-  padding: 10;
-  outline-color: #1259c3;
-  outline-width: thick;
-  outline-style: solid;
-  color: #ffffff;
-  border-radius: 1%;
-  position:initial;
-  display: table;
-  margin: 10px;
-  padding: 10px;
-  
+  color: white;
+  width: 45px;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 5px;
+  margin: 0px auto;
+  padding: 7px;
+
 }
 
 .fondo-claro {
@@ -168,34 +214,48 @@ h3{
 
 }
 
-.flex-container-parrafo {
-    display: flex;          /* Activa Flexbox en el contenedor */
-    gap: 10px;              /* Espacio entre los párrafos */
-    width: 100%;            /* Asegura que el contenedor ocupe todo el ancho disponible */
-    overflow-x: hidden;
+.flex-product-detail {
+  background-color: white;
+  border-top: 1px solid #ebebeb;
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  position: relative;
 }
 
 .parrafo {
-    margin: 0;              /* Elimina los márgenes por defecto */
-    padding: 10px;          /* Añade un poco de espacio interno */
-    background-color: #f0f0f0; /* Color de fondo para distinguir los párrafos */
-    border-radius: 5px;     /* Bordes redondeados */
-    box-sizing: border-box; /* Incluye el padding y border en el ancho */
-    white-space: nowrap;    /* Evita que los párrafos se rompan en varias líneas */
-    overflow: hidden;       /* Oculta cualquier desbordamiento de contenido */
-    text-overflow: ellipsis; /* Añade "..." si el contenido es demasiado largo */
-  }
-  
-  /* Asigna el ancho específico a cada párrafo */
-  .parrafo:nth-child(1) {
-    
-    text-align:end;     /* Centra el texto */
-    flex: 0 0 40%;          /* El primer párrafo ocupa el 40% del ancho */
+  margin: 0;
+  /* Elimina los márgenes por defecto */
+  padding: 3%;
+  /* Añade un poco de espacio interno */
+
+  /* Color de fondo para distinguir los párrafos */
+  border-radius: 5px;
+  /* Bordes redondeados */
+  box-sizing: border-box;
+  /* Incluye el padding y border en el ancho */
+  white-space: nowrap;
+  /* Evita que los párrafos se rompan en varias líneas */
+  overflow: hidden;
+  /* Oculta cualquier desbordamiento de contenido */
+  text-overflow: ellipsis;
+  /* Añade "..." si el contenido es demasiado largo */
 }
 
+/* Asigna el ancho específico a cada párrafo */
 .parrafo:nth-child(2) {
-  text-align:start;
-    flex: 0 0 60%;          /* El segundo párrafo ocupa el 60% del ancho */
+
+  text-align: end;
+  /* Centra el texto */
+  flex: 0 0 40%;
+  /* El primer párrafo ocupa el 40% del ancho */
+}
+
+.parrafo:nth-child(3) {
+  text-align: start;
+  flex: 0 0 60%;
+  /* El segundo párrafo ocupa el 60% del ancho */
 }
 
 
@@ -214,29 +274,45 @@ h3{
 
 }
 
-
-header nav {
-  display: none;
+header {
+  background-color: #EAC926;
+  padding: 20px;
 }
+
+.header-nav {
+  display: none;
+  margin: 0 auto;
+}
+
+.header-nav.active {
+  display: block;
+}
+
+.nav-bar a {
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+}
+
 
 header img {
-  width: 150px;
+  width: 50%;
 }
 
-header input{
+header input {
   width: 40%;
   line-height: 3em;
   border-radius: 10px;
   justify-content: center;
 }
 
-header button{
+header button {
   width: 2em;
   line-height: 3em;
 
 }
 
-header p{
+header p {
   align-items: center;
 }
 
@@ -251,7 +327,7 @@ article {
   text-align: left;
   border-bottom: solid 1px #ebebeb;
   margin: 15px;
-  
+
 }
 
 main {
@@ -265,14 +341,122 @@ img {
   max-width: 100%;
 }
 
+/*------- login -------*/
+
+.login-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+}
+
+.login-container label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-container button:hover {
+  background-color: #45a049;
+}
+
+/* --------- register -------*/
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  margin-top: 12px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type="reset"] {
+  background-color: #dc3545;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+
 @media (min-width: 361px) {
 
   .burguer-menu {
     display: none;
   }
 
-  .roboto-regular {
-    background-color: red;
+  .header-nav {
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-between;
+  }
+
+  .header-nav ul {
+    display: flex;
+    list-style: none;
+  }
+
+  .header-nav ul li {
+    margin: 0 6px;
+  }
+
+  .contenedor-header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .logo-header,
+  .form-search,
+  .cuotas {
+    width: calc(30% - 10px);
   }
 
   header img {
@@ -283,23 +467,29 @@ img {
   img {
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
   }
- .product {
-        width: calc(50% - 40px); /* Two columns for tablets */
-    }
+
+  .product {
+    width: calc(50% - 40px);
+    /* Two columns for tablets */
+  }
 }
- 
+
 
 @media (min-width: 769px) {
   header nav {
     display: inline;
   }
+
   .main-content {
-        padding: 40px 60px;
-    }
-  .product-list{
+    padding: 40px 60px;
+  }
+
+  .product-list {
     flex-wrap: nowrap;
   }
+
   .product {
-        width: calc(25% - 40px); /* Four columns for large desktops */
-    }
+    width: calc(25% - 40px);
+    /* Four columns for large desktops */
+  }
 }
