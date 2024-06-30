@@ -260,9 +260,18 @@ h3 {
 
 
 .agrandar-icon {
-  font-size: 40px;
+  font-size: 2em;
   color: #1259c3;
+  margin-bottom: 10px;
 
+}
+
+.agrandar-icon:hover{
+  color: #0022AA;
+}
+
+.footer-text{
+  margin-bottom: 30px;
 }
 
 .separacion {
@@ -295,8 +304,8 @@ header {
 }
 
 
-header img {
-  width: 50%;
+.home-banner img {
+  width: 100%;
 }
 
 header input {
@@ -319,15 +328,17 @@ header p {
 
 footer {
   background-color: #ebebeb;
+  color: #666;
+  padding: 40px 10px;
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  bottom: 0px;
 }
 
-article {
-  box-sizing: border-box;
-  text-align: left;
-  border-bottom: solid 1px #ebebeb;
-  margin: 15px;
-
+footer section{
+  text-align: center;
+  width: 100%;
 }
 
 main {
@@ -372,7 +383,7 @@ img {
 }
 
 .login-container button:hover {
-  background-color: #1259c3;
+  background-color: #0022AA;
 }
 
 .form-input:hover{
@@ -380,7 +391,7 @@ img {
 }
 /* --------- register -------*/
 
-form {
+/*form {
   max-width: 500px;
   margin: 0 auto;
   padding: 20px;
@@ -402,7 +413,7 @@ select {
   border-radius: 4px;
 }
 
-button {
+/*button {
   width: 100%;
   padding: 10px;
   background-color: #28a745;
@@ -419,7 +430,7 @@ button[type="reset"] {
 button:hover {
   opacity: 0.9;
 }
-
+*/
 
 @media (min-width: 361px) {
 
@@ -487,5 +498,15 @@ button:hover {
   .product {
     width: calc(25% - 40px);
     /* Four columns for large desktops */
+  }
+
+  footer{
+    justify-content: space-between;
+  }
+
+  footer section{
+    width: 33%;
+    flex-grow: 1;
+    padding: 0 15px;
   }
 }
