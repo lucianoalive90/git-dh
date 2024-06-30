@@ -46,53 +46,91 @@
         </div>
     </header>
 
-    <form action="pagina_principal.html" method="post">
-        <h2>Registro de Usuario</h2>
-        <label for="nombre-apellido">Nombre y Apellido:</label>
-        <input type="text" id="nombre-apellido" name="nombre-apellido" required>
+    <main class="register-main">
+        <section class="main-section">
+            <form action="/" method="get" class="create-acount-form">
+                <div class="form-register name-div">
+                    <label for="name"></label>
+                    <input type="text" id="name" name="name" placeholder="Nombre" class="form-input" required>
+                </div>
+                <div class="form-register name-div">
+                    <label for="last-name"></label>
+                    <input type="text" id="last-name" name="last-name" placeholder="Apellido" class="form-input"
+                        required>
+                </div>
+                <div class="form-register">
+                    <label for="user-name"></label>
+                    <input type="text" id="user-name" name="user-name" placeholder="Nombre de Usuari@"
+                        class="form-input">
+                </div>
+                <div class="form-register">
+                    <label for="email"></label>
+                    <input type="email" id="email" name="email" placeholder="Email" class="form-input">
+                </div>
+                <div class="form-register">
+                    <label for="birthday" class="label-title">Fecha de Nacimiento:</label>
+                    <input type="date" id="birthday" name="birthday" class="form-input" required>
+                </div>
+                <div class="form-register">
+                    <label for="home"></label>
+                    <input type="text" id="home" name="home" placeholder="Domicilio" class="form-input" required>
+                </div>
+                <div class="form-register">
+                    <label class="label-title">Perfil del Usuario:</label>
+                    <div class="user-profile-option">
+                        <input type="radio" id="comprador" name="user-profile" value="Comprador">
+                        <label for="comprador">Comprador</label>
+                    </div>
+                    <div class="user-profile-option">
+                        <input type="radio" id="vendedor" name="user-profile" value="Vendedor">
+                        <label for="vendedor">Vendedor</label>
+                    </div>
+                </div>
 
-        <label for="nombre-usuario">Nombre de Usuari@:</label>
-        <input type="text" id="nombre-usuario" name="nombre-usuario" required>
+                <div class="form-register">
+                    <label class="label-title">Categorías de interés</label>
+                    <div class="interest-category-option">
+                        <input type="checkbox" id="electro" name="interest-category" value="electro">
+                        <label for="electro">Electro</label>
+                    </div>
+                    <div class="interest-category-option">
+                        <input type="checkbox" id="moda" name="interest-category" value="moda">
+                        <label for="moda">Moda</label>
+                    </div>
+                    <div class="interest-category-option">
+                        <input type="checkbox" id="hogar" name="interest-category" value="hogar">
+                        <label for="hogar">Hogar</label>
+                    </div>
+                    <div class="interest-category-option">
+                        <input type="checkbox" id="jugueteria" name="interest-category" value="jugueteria">
+                        <label for="jugueteria">Juguetería</label>
+                    </div>
+                    <div class="interest-category-option">
+                        <input type="checkbox" id="vida-sana" name="interest-category" value="vida-sana">
+                        <label for="vida-sana">Vida sana</label>
+                    </div>
+                </div>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+                <div class="form-register">
+                    <label for="foto-usuario" class="label-title">Foto de Usuario:</label>
+                    <input type="file" id="foto-usuario" name="foto-usuario" accept="image/*" required>
+                </div>
+                <div class="form-register">
+                    <label for="contrasena" class="label-title">Contraseña:</label>
+                    <input type="password" id="contrasena" name="contrasena" class="form-input" required>
+                </div>
+                <div class="form-register">
+                    <label for="confirmar-contrasena" class="label-title">Confirmar Contraseña:</label>
+                    <input type="password" id="confirmar-contrasena" name="confirmar-contrasena" class="form-input" required>
+                </div>
 
-        <label for="fecha-nacimiento">Fecha de Nacimiento:</label>
-        <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required>
+                <button type="submit" class="button-form btn-Enviar">Enviar</button>
+                <button type="reset" class="button-form">Borrar</button>
+            </form>
+        </section>
+    </main>
 
-        <label for="domicilio">Domicilio:</label>
-        <input type="text" id="domicilio" name="domicilio" required>
-
-        <label for="perfil">Perfil del Usuario:</label>
-        <select id="perfil" name="perfil" required>
-            <option value="">Seleccione una opción</option>
-            <option value="comprador">Quiero Comprar</option>
-            <option value="vendedor">Quiero Vender</option>
-        </select>
-
-        <div class="checkbox-group">
-            <label>Categorías de Interés:</label>
-            <input type="checkbox" name="categorias[]" value="electro"><label> Electro</label>
-            <label><input type="checkbox" name="categorias[]" value="moda"> Moda</label>
-            <label><input type="checkbox" name="categorias[]" value="hogar"> Hogar</label>
-            <label><input type="checkbox" name="categorias[]" value="jugueteria"> Juguetería</label>
-            <label><input type="checkbox" name="categorias[]" value="vida-sana"> Vida Sana</label>
-        </div>
-
-        <label for="foto-usuario">Foto de Usuario:</label>
-        <input type="file" id="foto-usuario" name="foto-usuario" accept="image/*" required>
-
-        <label for="contrasena">Contraseña:</label>
-        <input type="password" id="contrasena" name="contrasena" required>
-
-        <label for="confirmar-contrasena">Confirmar Contraseña:</label>
-        <input type="password" id="confirmar-contrasena" name="confirmar-contrasena" required>
-
-        <button type="submit">Enviar</button>
-        <button type="reset">Borrar</button>
-    </form>
-
-     <!-- #Footer -->
+    <!-- #Footer -->
     <footer>
         <section>
             <h1><i class="fa-solid fa-credit-card agrandar-icon"></i></h1>
